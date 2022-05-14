@@ -45,19 +45,28 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedLabelStyle: const TextStyle(color: Colors.black),
         items: [
           _barItem(
-            icon: const Icon(Icons.home_outlined),
+            icon: const Icon(
+              Icons.home_outlined,
+            ),
             label: "Home",
           ),
           _barItem(
-            icon: const Icon(Icons.search),
+            icon: const Icon(
+              Icons.search,
+              color: Colors.orange,
+            ),
             label: "Teachers",
           ),
           _barItem(
-            icon: const Icon(Icons.videocam_outlined),
+            icon: const Icon(
+              Icons.videocam_outlined,
+            ),
             label: "Sessions",
           ),
           _barItem(
-            icon: const Icon(Icons.more_horiz),
+            icon: const Icon(
+              Icons.more_horiz,
+            ),
             label: "More",
           ),
         ],

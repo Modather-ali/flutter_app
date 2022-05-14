@@ -1,4 +1,7 @@
+import 'package:app/modules/teacher.dart';
 import 'package:flutter/material.dart';
+
+import 'widgets/horizontal_card.dart';
 
 class TeachersScreen extends StatefulWidget {
   const TeachersScreen({Key? key}) : super(key: key);
@@ -28,7 +31,6 @@ class _TeachersScreenState extends State<TeachersScreen> {
             icon: const Icon(
               Icons.window,
               size: 25,
-              // color: Colors,
             ),
           ),
           IconButton(
@@ -36,10 +38,21 @@ class _TeachersScreenState extends State<TeachersScreen> {
             icon: const Icon(
               Icons.list,
               size: 30,
-              // color: Colors,
             ),
           ),
         ],
+      ),
+      body: ListView.separated(
+        padding: const EdgeInsets.all(10),
+        itemCount: teachersList.length,
+        itemBuilder: (context, index) {
+          return HorizontalCard(
+            teacher: teachersList[index],
+          );
+        },
+        separatorBuilder: (context, index) {
+          return const Divider();
+        },
       ),
     );
   }
