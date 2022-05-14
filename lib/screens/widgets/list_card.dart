@@ -1,19 +1,20 @@
 import 'package:app/modules/teacher.dart';
 import 'package:flutter/material.dart';
 
-class HorizontalCard extends StatefulWidget {
+class ListCard extends StatefulWidget {
   final Teacher teacher;
-  const HorizontalCard({Key? key, required this.teacher}) : super(key: key);
+  const ListCard({Key? key, required this.teacher}) : super(key: key);
 
   @override
-  State<HorizontalCard> createState() => _HorizontalCardState();
+  State<ListCard> createState() => _ListCardState();
 }
 
-class _HorizontalCardState extends State<HorizontalCard> {
+class _ListCardState extends State<ListCard> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -25,7 +26,7 @@ class _HorizontalCardState extends State<HorizontalCard> {
                   horizontalTitleGap: 10.0,
                   leading: Stack(
                     children: [
-                      Image.asset("assets/user.png", height: 50),
+                      Image.asset("assets/user.png", height: 40),
                       Positioned(
                         bottom: 3,
                         right: 3,
@@ -125,7 +126,9 @@ class _HorizontalCardState extends State<HorizontalCard> {
             ],
           ),
           SingleChildScrollView(
+            // scrollDirection: Axis.horizontal,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
                   margin: const EdgeInsets.all(3),
